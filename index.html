@@ -141,7 +141,7 @@
                         </div>
                         <div class="mb-3">
                           <label for="no" class="form-label">No. Telp</label>
-                          <input type="text"  minlength="12" maxlength="12" class="form-control" id="no" name="no.telp" aria-describedby="no" required="required">
+                          <input type="tel"  minlength="12" maxlength="12" class="form-control" id="no.telp" name="no.telp" aria-describedby="no" required="required">
                         </div>
                         <div class="mb-3">
                           <label for="pesan" class="form-label">Pesan</label>
@@ -205,6 +205,14 @@
     })
       .catch(error => console.error('Error!', error.message))
   });
+</script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="PLUGINS/js/intlTelInput.js"></script>
+ <script>
+    $("#phone").intlTelInput({
+      utilsScript: "PLUGINS/js/utils.js"
+    });  
 </script>
 
   </body>
